@@ -3,7 +3,7 @@ import { isMobile } from "react-device-detect";
 import { Box, Heading, Form, TextInput, Button, Text } from "grommet";
 import { Link } from "react-router-dom";
 
-const LogIn = ({ submitHandler, value, setValue }) => {
+const Login = ({ submitHandler, value, setValue }) => {
   return (
     <Box
       style={{
@@ -80,4 +80,4 @@ const LogIn = ({ submitHandler, value, setValue }) => {
   );
 }
 
-export default LogIn
+export default Login;

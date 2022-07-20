@@ -1,10 +1,17 @@
 import React from 'react';
 import img from 'E:/blog/src/images/logo.png';
 import 'E:/blog/src/App.css';
-// import { useNavigate } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 
+function HeaderTag(){
+   
+   const [gotologin, setgotologin] = React.useState(false);
+ 
 
-const headerTag = () => {
+if(gotologin){
+   return <Navigate to="/Login"/>;
+ }
+
    return(
       <div class="header">
   <img className='logo-img' src={img} alt="" />
@@ -15,11 +22,14 @@ const headerTag = () => {
     <a href="#services">Services</a>
     <a href="team">Team</a>
     <a href="blogs">Blogs</a>
-    <a className="get-started" href="#">Get started</a>
+    <button className="get-started" onClick={() =>
+   {setgotologin(true);
+   }}
+   >Get started</button>
 </div>
 </div>
 
    )
    }
         
-export default headerTag;
+export default HeaderTag;
