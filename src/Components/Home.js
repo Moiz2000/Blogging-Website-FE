@@ -4,11 +4,11 @@ import img1 from "E:/blog/src/images/envelope.png";
 
 const homeTag = () => {
   return (
-      <div className="container" id="home">
-        <div className="row-hero-padd">
-        <div className="col-md-6 col-12 col-sm-6">
-          <div className="hero-text">
-             <h1>
+      <div id="home">
+      <div class="container">
+  <div class="row">
+    <div class="column-66">
+    <h1>
              Welcome To   
              <span>Blog Buzz</span>
              </h1>
@@ -19,12 +19,12 @@ const homeTag = () => {
           kniw about it's services and get to know about the team who <br />
           developed this website
         </p>
-      </div>
     </div>
-    <div className="col-md-6 col-12 col-sm-6">
-           <img className="img-width" src={img1} alt="" />
-    </div>       
+    <div class="column-33">
+    <img className="img-width" src={img1} alt="" />
     </div>
+  </div>
+</div>
       </div>
   );
 };
