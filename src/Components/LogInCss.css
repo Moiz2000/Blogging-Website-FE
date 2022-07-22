@@ -152,3 +152,17 @@
     line-height: 42px;
     color: #000000;
 }
+
+.Backbtn{
+    position: absolute;
+    width: 120px;
+    height: 42px;
+    left: 44px;
+    top: 55px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 100;
+    font-size: 25px;
+    line-height: 42px;
+    color: #000000;
+}
