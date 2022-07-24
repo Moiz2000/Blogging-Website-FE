@@ -13,19 +13,25 @@ function HeaderTag(){
 //        }
       
    return(
-      <div class="header">
-  <img className='logo-img' src={img} alt="" />
-  <a href="#home" class="logo">Blog Buzz</a>
-  <div class="header-right">
+<div class="header">
+  
+  <div className="headerleft" >
+    <img className='logo-img' src={img} alt="" />
+    <a href="#home" class="logo">Blog Buzz</a>
+  </div> 
+
+  <div className="headercenter headerlist headerlistitem">
     <a className=
     "home" href="#home">Home</a>
     <a href="#about">About</a>
     <a href="#services">Services</a>
     <a href="#team">Team</a>
     <a  onClick={() => navigate('/Masterpage')}>Blogs</a>
-    <button onClick={() => navigate('/login')} className="get-started"> Get Started</button>
-    {/* <Link to="/login">< className="get-started">Get started */}
-</div>
+  </div>
+
+  <div className='headerright'>
+    <button onClick={() => navigate('/loginpage')} className="get-started"> Get Started</button>
+  </div>
 </div>
 
    )

@@ -6,10 +6,12 @@ import Divider from '../Components/Divider';
 import Services from '../Components/Services';
 import Team from '../Components/Team';
 import '../App.css';
+import Topbar from '../Components/Topbar/Topbar';
 
-function Landingpage(){
+function Homepage(){
   return (
     <div>
+      {/* <Topbar/> */}
       <HeaderTag></HeaderTag>
       <HomeTag></HomeTag>
       <Divider></Divider>
@@ -20,4 +22,4 @@ function Landingpage(){
   );
 }
 
-export default Landingpage;
+export default Homepage;

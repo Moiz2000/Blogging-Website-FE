@@ -5,6 +5,7 @@ import Header from 'E:/blog/src/Components/Bloglisting/Header';
 import Search from 'E:/blog/src/Components/Bloglisting/Search';
 import { blogList } from 'E:/blog/src/Components/Bloglisting/Bloglist/Blogitem/Data';
 import Showblog from 'E:/blog/src/Components/Bloglisting/Showblog';
+import Topbar from '../Components/Topbar/Topbar';
 
 const Masterpage = () => {
   const [blogs, setBlogs] = useState(blogList);
@@ -34,7 +35,7 @@ const Masterpage = () => {
   return (
     <div>
       {/* Page Header */}
-      <Header />
+      <Topbar />
       {/* Search Bar */}
       <Search
         value={searchKey}
