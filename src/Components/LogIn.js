@@ -1,83 +1,35 @@
 import React from 'react';
-import { isMobile } from "react-device-detect";
-import { Box, Heading, Form, TextInput, Button, Text } from "grommet";
-import { Link } from "react-router-dom";
+import {useNavigate} from 'react-router-dom';
+import 'E:/blog/src/App.css';
+// import { isMobile } from "react-device-detect";
+// import { Box, Heading, Form, TextInput, Button, Text } from "grommet";
 
-const Login = ({ submitHandler, value, setValue }) => {
+
+function Login(){
+
+  const navigate = useNavigate()
+
   return (
-    <Box
-      style={{
-        backgroundColor: "#E6E6E6",
-        justifyContent: "space-evenly",
-        flexDirection: "column",
-        alignItems: "center",
-        borderColor: "red",
-        minWidth: isMobile ? "300px" : "450px",
-        minHeight: isMobile ? "300px" : "680px",
-        marginTop: "50px",
-        marginBottom: "50px",
-        borderRadius: "10px",
-      }}
-    >
-      <Heading style={{ fontFamily: "sans-serif" }} level="2" margin="none" gap='medium'>
-        Login
-      </Heading>
-      <Form
-        value={value}
-        onChange={(newValue) => setValue(newValue)}
-        onSubmit={submitHandler}
-        style={{ minWidth: "250px" }}
-      >
-        <Box direction="column" gap="medium">
-          <Box>
-            <Text style={{ fontFamily: "sans-serif" }}>Email</Text>
-            <TextInput
-              plain
-              style={{
-                fontFamily: "sans-serif",
-                backgroundColor: "lightgrey",
-                fontWeight: "normal",
-              }}
-              required
-              placeholder="Email Adress"
-              type="email"
-              name="email"
-            />
-          </Box>
-          <Box>
-            <Text style={{ fontFamily: "sans-serif" }}>Username</Text>
-            <TextInput
-              plain
-              style={{
-                fontFamily: "sans-serif",
-                backgroundColor: "lightgrey",
-                fontWeight: "normal",
-              }}
-              required
-              placeholder="Username"
-              type="text"
-              name="username"
-            />
-          </Box>
-          <Box direction="row" gap="large">
-            <Button
-              color="status-ok"
-              type="submit"
-              primary
-              label="LogIn"
-              style={{ fontFamily: "sans-serif" }}
-            />
-            <Button
-              style={{ fontFamily: "sans-serif" }}
-              color="status-ok"
-              type="reset"
-              label="Reset"
-            />
-          </Box>
-        </Box>
-      </Form>
-    </Box>
-  );
-}
-
-export default Login;
+        <div className='LogInmain'>
+        <div className='heading'>LogIn to Account</div>
+        <form action='/'>
+        <input className='inputEmail' type='email' placeholder='Enter your Email here' required/>
+        <input className='inputUsername' type="text" placeholder='Enter your Username here' required/>
+        <input className='RememberCheck' type='checkbox'/>
+        <p className='RememberText'>Remember Me</p>
+        <p className='Forget'>Forget Password?</p>
+        <button onClick={() => navigate('/masterpage')} className='SignInButton' type='submit'>Log In</button>
+        </form>
+        <div className='SignUpcontent'>
+        <p className='Hello'><u>Hello, Friends!</u></p>
+        <p className='Para'>Enter your information and share your journey with people accross the world</p>
+        <form className='ForSignUp'>
+        <button className='SignUpLink'>SignUp</button>
+        </form>
+        </div>
+        </div>
+    );
+  }
+  
+  export default Login;
+  

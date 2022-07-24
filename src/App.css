@@ -258,4 +258,157 @@ hr{
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
 }
+.LogInmain{
+  position: relative;
+  width: 1440px;
+  height: 787px;
+  
+  background: #FFFFFF
+}
+.SignUpcontent{
+  box-sizing: border-box;
 
+  position: absolute;
+  width: 682px;
+  height: 787px;
+  left: 914px;
+  top: 0px;
+
+  background: #D9D9D9;
+  border: 1px solid #000000;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+}
+
+.heading{
+  position: absolute;
+  width: 431px;
+  height: 59px;
+  left: 261px;
+  top: 174px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 48px;
+  color: #000000;
+}
+
+.inputEmail{
+  position: absolute;
+  width: 470px;
+  height: 64px;
+  left: 152px;
+  top: 263px;
+  border: 1px solid #000000;
+  background: #EDE4E4;
+
+  /* position: absolute;
+  width: 88px;
+  height: 42px;
+  left: 132px;
+  top: 270px;
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 42px;
+
+  color: #000000; */
+}
+
+.inputUsername{
+  position: absolute;
+  width: 470px;
+  height: 64px;
+  left: 152px;
+  top: 351px;
+  background: #EDE4E4;
+}
+
+.RememberCheck{
+  position: absolute;
+  width: 23px;
+  height: 24px;
+  left: 171px;
+  top: 447px;
+  background: #D9D9D9;
+}
+.RememberText{
+  position: absolute;
+  width: 206px;
+  height: 36px;
+  left: 201px;
+  top: 442px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 100;
+  font-size: 24px;
+  line-height: 36px;
+  color: #000000;
+}
+
+.Forget{
+  position: absolute;
+  width: 254px;
+  height: 36px;
+  left: 423px;
+  top: 442px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 100;
+  font-size: 24px;
+  line-height: 36px;
+  color: #000000;
+}
+
+.SignInButton{
+  position: absolute;
+  width: 143px;
+  height: 57px;
+  left: 304px;
+  top: 506px;
+  background: #D9D9D9;
+}
+
+.SignUpcontent .Hello{
+      position: absolute;
+      width: 265px;
+      height: 42px;
+      left: 269px;
+      top: 257px;
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 35px;
+      line-height: 42px;
+      color: #000000;
+}
+
+.SignUpcontent .Para{
+  position: absolute;
+  width: 385px;
+  height: 108px;
+  left: 208px;
+  top: 325px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 36px;
+  color: #000000;
+}
+
+.SignUpcontent .ForSignUp .SignUpLink{
+  position: absolute;
+  width: 120px;
+  height: 42px;
+  left: 316px;
+  top: 465px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 100;
+  font-size: 25px;
+  line-height: 42px;
+  color: #000000;
+}
