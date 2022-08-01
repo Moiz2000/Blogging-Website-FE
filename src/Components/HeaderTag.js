@@ -1,5 +1,5 @@
 import React from 'react';
-import img from 'E:/blog/src/images/logo.png';
+import img from 'E:/blog/src/images/logo.jpg';
 import 'E:/blog/src/App.css';
 import {useNavigate} from "react-router-dom";
 
@@ -7,11 +7,6 @@ import {useNavigate} from "react-router-dom";
 function HeaderTag(){
    const navigate = useNavigate()
 
-// function onloginclick()
-//       {
-//       navigate("/Login")
-//        }
-      
    return(
 <div class="header">
   
@@ -23,8 +18,6 @@ function HeaderTag(){
   <div className="headercenter headerlist headerlistitem">
     <a className=
     "home" href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
     <a href="#team">Team</a>
     <a  onClick={() => navigate('/Masterpage')}>Blogs</a>
   </div>

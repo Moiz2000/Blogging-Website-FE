@@ -1,12 +1,7 @@
 import { Link } from "react-router-dom";
-import "../Post/Post.css";
-import {useNavigate} from "react-router-dom";
-
+import "./post.css";
 
 export default function Post({img}) {
-const navigate=useNavigate()
-
-
   return (
     <div className="post">
       <img
@@ -28,7 +23,7 @@ const navigate=useNavigate()
           </span>
         </div>
         <span className="postTitle">
-          <Link to="/singlepost" className="link"   onClick={() => navigate('/singlepost')}>
+          <Link to="/single" className="link">
             Lorem ipsum dolor sit amet
           </Link>
         </span>

@@ -1,6 +1,6 @@
-import "./Writepostpage.css";
+import "./Write.css";
 
-export default function Writepostpage() {
+export default function Write() {
   return (
     <div className="write">
       <img

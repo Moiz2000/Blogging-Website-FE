@@ -53,14 +53,19 @@
   border-radius: 4px;
 }
 
+*{
+  font-family: "Josefin Sans", sans-serif;
+
+}
 /* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
 .header a.logo {
   width: 80px;
-  height: 40px;
+  height: 80px;
   border-radius: 50%;
   object-fit: cover;
   margin-right: 15px;
   cursor: pointer;
+  /* font-weight: 14px; */
 }
 
 button.get-started {
@@ -143,8 +148,8 @@ padding-bottom: 0;
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px;
+  margin-right: -5px;
+  margin-left: -5px;
 }
 h1 span {
   display: inline-block;

@@ -1,5 +1,5 @@
-import "./Setting.css";
-import Sidebar from "../../Components/Sidebar/Sidebar";
+import "./settings.css";
+import Sidebar from "../../Components/sidebar/Sidebar";
 
 export default function Settings() {
   return (
@@ -37,7 +37,7 @@ export default function Settings() {
           </button>
         </form>
       </div>
-      <Sidebar/>
+      <Sidebar />
     </div>
   );
 }
