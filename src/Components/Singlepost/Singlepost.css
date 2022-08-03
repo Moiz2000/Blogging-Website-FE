@@ -69,3 +69,6 @@
   cursor: pointer;
   font-style: oblique;
 }
+.colorchange:active{
+  color: rgb(255, 0, 34);
+}

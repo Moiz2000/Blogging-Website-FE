@@ -7,10 +7,7 @@ import '../App.css';
 function firstpage(){
   return (
     <div>
-
-      <HeaderTag></HeaderTag>
-      <HomeTag></HomeTag>
-    <Team/>
+        <HomeTag/>
     </div>
   );
 }

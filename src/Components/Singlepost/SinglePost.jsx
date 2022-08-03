@@ -44,11 +44,26 @@ export default function SinglePost() {
           a odit 
           <br />
         </p>
-           <li className="links" >
+        <ul className="sidebarList">
+          <li className="sidebarListItem colorchange">
+              Like
+          </li>
+          <li className="sidebarListItem">
+            <Link className="link" to="/comments">
+              Comment
+            </Link>
+          </li>
+          
+        </ul>
+           {/* <li className="links" >
         <Link to="/comments">
                 Comments
           </Link>
          </li> 
+         <li className="links" >
+        Like
+
+         </li> */}
       </div>
     </div>
   );

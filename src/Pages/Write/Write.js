@@ -10,9 +10,15 @@ export default function Write() {
       />
       <form className="writeForm">
         <div className="writeFormGroup">
-          <label htmlFor="fileInput">
-            <i className="writeIcon fas fa-plus"></i>
-          </label>
+     
+      <select className="languages" id="lang">
+        <option value="javascript">category</option>
+        <option value="php">music</option>
+        <option value="java">play</option>
+        <option value="golang">summer</option>
+        <option value="python">travel</option>
+      </select>
+
           <input id="fileInput" type="file" style={{ display: "none" }} />
           <input
             className="writeInput"

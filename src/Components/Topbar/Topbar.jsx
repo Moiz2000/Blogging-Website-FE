@@ -13,19 +13,21 @@ export default function Topbar() {
       </div>
       <div className="topCenter">
         <ul className="topList">
-          <li className="topListItem">
+          {/* <li className="topListItem">
             <Link className="link" to="/">
               HOME
             </Link>
-          </li>
+          </li> */}
           {/* <li className="topListItem">ABOUT</li>
           <li className="topListItem">CONTACT</li> */}
           <li className="topListItem">
             <Link className="link" to="/write">
               WRITE
             </Link>
+            
           </li>
-          {user && <li className="topListItem">LOGOUT</li>}
+          {user && <li className="topListItem">LOGOUT</li>
+          }
         </ul>
       </div>
       <div className="topRight">
@@ -51,7 +53,7 @@ export default function Topbar() {
             </li>
           </ul>
         )}
-        <i className="topSearchIcon fas fa-search"></i>
+        {/* <i className="topSearchIcon fas fa-search"></i> */}
       </div>
     </div>
   );

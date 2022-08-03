@@ -1,56 +1,66 @@
-/* Style the header with a grey background and some padding */
-.header {
-  margin-top: 0;
-  background-color: white;
-  position: sticky;
-  top: 0;
-  width: 100%;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  z-index: 999;
-  font-family: "Josefin Sans", sans-serif;
-}
-
-.headerleft,
-.headerright {
-  flex: 3;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.headercenter {
-  flex: 6;
-}
-.headerlist {
-  display: flex;
-  justify-content: center;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.headerlistitem {
-  margin-right: 20px;
-  font-size: 18px;
-  font-weight: 300;
-  cursor: pointer;
-}
-
-.headerlistitem:hover{
-    color: gray;
-}
-
-/* Style the header links */
-.header a {
-  float: left;
-  color: black;
+.home-container {
+  position: relative;
   text-align: center;
-  padding: 12px;
-  text-decoration: none;
-  font-size: 18px;
-  line-height: 25px;
-  border-radius: 4px;
+  color: white;
+}
+.bg-img{
+width: 100%;
+height: 800px
+}
+/* Bottom left text */
+.bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+}
+
+/* Top left text */
+.top-left {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+
+/* Top right text */
+.top-right {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+}
+
+/* Bottom right text */
+.bottom-right {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+}
+
+/* Centered text */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}/* Style the header with a grey background and some padding */
+
+.logo-name{
+text-decoration: solid;
+font-size: 35px;
+color: #000000;
+margin-left: 10px;
+
+}
+
+.sidebarlistItem {
+  display: inline-block;
+  width: 50%;
+  margin-top: 15px;
+  cursor: pointer;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 50px;
 }
 
 *{
@@ -58,7 +68,7 @@
 
 }
 /* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
-.header a.logo {
+/* .header a.logo {
   width: 80px;
   height: 80px;
   border-radius: 50%;
@@ -66,7 +76,7 @@
   margin-right: 15px;
   cursor: pointer;
   /* font-weight: 14px; */
-}
+
 
 button.get-started {
   padding: 9px;
@@ -144,6 +154,7 @@ padding-bottom: 0;
   margin-left: auto;
 } */
 .row {
+  color: #000000;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
