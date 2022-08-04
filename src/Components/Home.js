@@ -35,7 +35,7 @@ const HomeTag = () => {
   </div>
   <div >
 
-    <a className="sidebarList sidebarlistItem" onClick={() => navigate('/loginpage')}>Blogs</a>
+    <a className="sidebarList sidebarlistItem" onClick={() => navigate('/homepage')}>Blogs</a>
     <button className="sidebarList sidebarlistItem get-started" onClick={() => navigate('/loginpage')}> Get Started</button>
 
   </div>

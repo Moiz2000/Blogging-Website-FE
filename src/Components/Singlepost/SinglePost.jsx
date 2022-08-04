@@ -2,6 +2,9 @@ import { Link } from "react-router-dom";
 import "./singlePost.css";
 
 export default function SinglePost() {
+
+  const user = false;
+
   return (
     <div className="singlePost">
       <div className="singlePostWrapper">
@@ -12,10 +15,13 @@ export default function SinglePost() {
         />
         <h1 className="singlePostTitle">
           Lorem ipsum dolor
+         {
+          user &&
           <div className="singlePostEdit">
             <i className="singlePostIcon far fa-edit"></i>
             <i className="singlePostIcon far fa-trash-alt"></i>
           </div>
+           }
         </h1>
         <div className="singlePostInfo">
           <span>
@@ -44,7 +50,10 @@ export default function SinglePost() {
           a odit 
           <br />
         </p>
-        <ul className="sidebarList">
+        {
+          user &&
+        
+        <ul className="sidebarlist">
           <li className="sidebarListItem colorchange">
               Like
           </li>
@@ -53,9 +62,9 @@ export default function SinglePost() {
               Comment
             </Link>
           </li>
-          
         </ul>
-           {/* <li className="links" >
+        }
+{/* <li className="links" >
         <Link to="/comments">
                 Comments
           </Link>

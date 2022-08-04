@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import "./topbar.css";
 
 export default function Topbar() {
-  const user = true;
+  const user = false;
   return (
     <div className="top">
       <div className="topLeft">
@@ -21,10 +21,11 @@ export default function Topbar() {
           {/* <li className="topListItem">ABOUT</li>
           <li className="topListItem">CONTACT</li> */}
           <li className="topListItem">
-            <Link className="link" to="/write">
+           {user && <Link className="link" to="/write">
               WRITE
-            </Link>
-            
+            </Link>}
+            {/* {user && <link className="link" to="/write">WRITE</link>
+          }  */}
           </li>
           {user && <li className="topListItem">LOGOUT</li>
           }
@@ -42,12 +43,12 @@ export default function Topbar() {
         ) : (
           <ul className="topList">
             <li className="topListItem">
-              <Link className="link" to="/login">
+              <Link className="link" to="/loginpage">
                 LOGIN
               </Link>
             </li>
             <li className="topListItem">
-              <Link className="link" to="/register">
+              <Link className="link" to="/signupage">
                 REGISTER
               </Link>
             </li>
