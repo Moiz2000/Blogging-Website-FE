@@ -11,7 +11,7 @@ export default function Homepage() {
   return (
     <>
     <Topbar/>
-      {/* <Header /> */}
+      <Header />
       <div className="home">
         <Posts />
       </div>
