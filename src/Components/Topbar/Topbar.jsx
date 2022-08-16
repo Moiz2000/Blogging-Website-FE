@@ -17,12 +17,22 @@ export default function Topbar() {
         { user  &&   <li><Link to="/homepage">HOME</Link></li>}
         {/* { user  &&   <li> <Link to="#"> ABOUT </Link></li>} */}
         {/* {user   &&   <li > <Link to="#"> CONTACT</Link></li>} */}
+        {user   && 
+       <div class="dropdown">
+      <li class="dropbtn"><Link to="#">CATEGORIES</Link> </li>
+       <div class="dropdown-content">
+         <a href="#">Life</a>
+         <a href="#">Travel</a>
+         <a href="#">Music</a>
+       </div>
+     </div>}
         {user   && <li><Link to="/write">WRITE</Link></li>}
         {user   && <li> <Link to="/">LOGOUT</Link></li>}
         {user   && <li><Link to="/settings"> PROFILE</Link></li>}
         {user   || <li><Link className="link" to="/loginpage">LOGIN</Link></li>}
         {user || <li><Link className="link" to="/signupage">REGISTER</Link></li>}
           </ul>
+          {/* <p>______________________________________________________________________________________________________________________________________________________</p> */}
       </nav>
     </div>
   );

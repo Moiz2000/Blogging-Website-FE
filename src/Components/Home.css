@@ -85,16 +85,11 @@ header ul li{
   font-size: 40px;
   margin-left: 90px;
   line-height: 50px;
+  border: 2px solid  #1e6369;
+border-radius: 12px;
   /* border: 2px solid  #1e6369; */
  }
-   header ul li:hover{
-    /* display: inline-block; */
-    /* background-color: #1e6369; */
-    color: #fff;
-    border-radius: 12px;
-    border: 2px solid  #1e6369;
-
-  }
+ 
   .list{
     position: absolute;
     top: 85%;

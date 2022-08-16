@@ -8,14 +8,14 @@ export const getComments = async () => {
       parentId: null,
       createdAt: "2021-08-16T23:00:33.010+02:00",
     },
-    {
-      id: "2",
-      body: "Second comment",
-      username: "John",
-      userId: "2",
-      parentId: null,
-      createdAt: "2021-08-16T23:00:33.010+02:00",
-    },
+    // {
+    //   id: "2",
+    //   body: "Second comment",
+    //   username: "John",
+    //   userId: "2",
+    //   parentId: null,
+    //   createdAt: "2021-08-16T23:00:33.010+02:00",
+    // },
     {
       id: "3",
       body: "First comment first child",
@@ -24,14 +24,14 @@ export const getComments = async () => {
       parentId: "1",
       createdAt: "2021-08-16T23:00:33.010+02:00",
     },
-    {
-      id: "4",
-      body: "Second comment second child",
-      username: "John",
-      userId: "2",
-      parentId: "2",
-      createdAt: "2021-08-16T23:00:33.010+02:00",
-    },
+    // {
+    //   id: "4",
+    //   body: "Second comment second child",
+    //   username: "John",
+    //   userId: "2",
+    //   parentId: "2",
+    //   createdAt: "2021-08-16T23:00:33.010+02:00",
+    // },
   ];
 };
 
