@@ -3,7 +3,7 @@ import "./singlePost.css";
 
 export default function SinglePost() {
 
-  const user = false;
+  const user = true;
 
   return (
     <div className="singlePost">
