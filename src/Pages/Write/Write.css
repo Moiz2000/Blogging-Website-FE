@@ -61,7 +61,6 @@ h3,
 h4,
 h5,
 h6,
-p,
 blockquote,
 pre,
 a,
@@ -129,12 +128,13 @@ time,
 mark,
 audio,
 video {
+	font-family: 'Courier New', Courier, monospace;
   justify-content: center;
   position:none;
   /* float: right; */
 	font-size: 100%;
 	font: inherit;
-	/* vertical-align: baseline; */
+	vertical-align: baseline;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -149,12 +149,12 @@ hgroup,
 menu,
 nav,
 section {
-	/* display: block; */
+	display: block;
 }
 
 body {
   justify-content:center ;
-	line-height: 1;
+	/* line-height: 1; */
 	font-family: 'Open Sans', sans-serif;
 	font-size: 14px;
 	background: #f6f6f6;
@@ -609,6 +609,16 @@ h6 {
 	padding-right: 0;
 }
 
+.row>* {
+	/* text-align: center;
+	align-content: center; */
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * .5);
+    padding-left: calc(var(--bs-gutter-x) * .5);
+    margin-top: var(--bs-gutter-y);
+}
 .header .logo {
 	display: inline-block;
 	margin: 5px 0 5px 0;
@@ -1704,6 +1714,7 @@ a.wit-btn {
            == Search List css==
 *************************************************/
 .listpgWraper {
+	margin-left: 10%;
   text-align: center;
   justify-content: center;
 	/* padding: 50px 0; */

@@ -533,3 +533,6 @@ hr{
   line-height: 42px;
   color: #000000;
 }
+        <label htmlFor="fileInput">
+              <i className="settingsPPIcon far fa-user-circle"></i>{" "}
+            </label>
