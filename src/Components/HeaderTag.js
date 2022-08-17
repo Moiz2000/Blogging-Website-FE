@@ -1,7 +1,8 @@
 import React from 'react';
-import img from 'E:/blog/src/images/logo.jpg';
-import 'E:/blog/src/App.css';
-import {useNavigate} from "react-router-dom";
+import img from '../images/logo.jpg';
+import '../App.css';
+import { useNavigate } from "react-router-dom";
+
 
 
 function HeaderTag(){

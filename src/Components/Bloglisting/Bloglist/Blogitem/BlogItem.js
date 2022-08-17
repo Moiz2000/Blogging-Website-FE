@@ -1,13 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Chip from 'E:/blog/src/Components/Common/Chip';
-import 'E:/blog/src/Components/Bloglisting/styles.css';
-import img from  'E:/blog/src/graphic-design-trends.png';
-import aut from 'E:/blog/src/author.jpg';
+import Chip from '../../../Common/Chip';
+import '../../styles.css';
+import img from '../../../../graphic-design-trends.png';
+import aut from '../../../../author.jpg';
 import { useNavigate } from 'react-router-dom';
 import { useParams } from 'react-router';
 const BlogItem = ({
-
 
   blog: {
     description,

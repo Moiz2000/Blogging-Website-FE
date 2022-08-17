@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
-import { blogList } from 'E:/blog/src/Components/Bloglisting/Bloglist/Blogitem/Data';
-import Tag from 'E:/blog/src/Components/Bloglisting/Bloglist/Tag';
-import EmptyList from 'E:/blog/src/Components/Bloglisting/Bloglist/Blogitem/EmptyList';
-import 'E:/blog/src/Components/Bloglisting/styles.css';
+import { blogList } from './Bloglist/Blogitem/Data';
+import Tag from './Bloglist/Tag';
+import EmptyList from './Bloglist/Blogitem/EmptyList';
+import './styles.css';
 import { Link, useNavigate } from 'react-router-dom';
-import Chip from 'E:/blog/src/Components/Common/Chip';
+import Chip from '../Common/Chip';
 
 const Showblog = () => {
   const { id } = useParams();

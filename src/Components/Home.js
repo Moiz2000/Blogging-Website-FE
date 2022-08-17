@@ -1,7 +1,7 @@
 import React from "react";
-import "E:/blog/src/Components/Home.css";
-import bg from "E:/blog/src/images/1.jpg";
-import img from 'E:/blog/src/images/logo.jpg';
+import "./Home.css";
+import bg from "../images/1.jpg";
+import img from '../images/logo.jpg';
 import {useNavigate} from "react-router-dom";
 import { Home } from "@mui/icons-material";
 

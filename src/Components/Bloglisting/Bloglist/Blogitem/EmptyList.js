@@ -1,5 +1,5 @@
 import React from 'react';
-import 'E:/blog/src/Components/Bloglisting/styles.css';
+import '../../styles.css';
 
 const EmptyList = () => (
   <div className='emptyList-wrap'>

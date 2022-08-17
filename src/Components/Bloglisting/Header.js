@@ -1,9 +1,9 @@
 import React from 'react'
-import {useNavigate} from "react-router-dom";
-import Postblog from 'E:/blog/src/Components/Bloglisting/Postblog';
-import 'E:/blog/src/Components/Bloglisting/styles.css';
+import { useNavigate } from "react-router-dom";
+import Postblog from '../Bloglisting/Postblog';
+import '../Bloglisting/styles.css';
 function Header() {
-  
+
   const navigate = useNavigate()
 
   return (

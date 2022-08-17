@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import EmptyList from 'E:/blog/src/Components/Bloglisting/Bloglist/Blogitem/EmptyList';
-import BlogList from 'E:/blog/src/Components/Bloglisting/Bloglist/BlogList';
-import Header from 'E:/blog/src/Components/Bloglisting/Header';
-import Search from 'E:/blog/src/Components/Bloglisting/Search';
-import { blogList } from 'E:/blog/src/Components/Bloglisting/Bloglist/Blogitem/Data';
-import Showblog from 'E:/blog/src/Components/Bloglisting/Showblog';
+import EmptyList from '../Components/Bloglisting/Bloglist/Blogitem/EmptyList';
+import BlogList from '../Components/Bloglisting/Bloglist/BlogList';
+import Header from '../Components/Bloglisting/Header';
+import Search from '../Components/Bloglisting/Search';
+import { blogList } from '../Components/Bloglisting/Bloglist/Blogitem/Data';
+import Showblog from '../Components/Bloglisting/Showblog';
 import Topbar from '../Components/topbar/Topbar';
 
 const Masterpage = () => {

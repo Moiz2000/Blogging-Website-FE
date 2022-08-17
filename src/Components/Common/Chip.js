@@ -1,5 +1,5 @@
 import React from 'react';
-import 'E:/blog/src/Components/Bloglisting/styles.css';
+import '../Bloglisting/styles.css';
 
 
 const Chip = ({ label }) => <p className='chip'>{label}</p>;

@@ -1,7 +1,5 @@
 // import "./header.css";
-import t1 from "E:/blog/src/images/travel1.jpg";
-import t2 from "E:/blog/src/images/travel2.jpg";
-import t3 from "E:/blog/src/images/travel3.jpg";
+
     export const SliderData = [
       {
         image:

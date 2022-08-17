@@ -17,7 +17,7 @@ export default function Topbar() {
         { user  &&   <li><Link to="/homepage">HOME</Link></li>}
         {/* { user  &&   <li> <Link to="#"> ABOUT </Link></li>} */}
         {/* {user   &&   <li > <Link to="#"> CONTACT</Link></li>} */}
-        {user   && 
+      
        <div class="dropdown">
       <li class="dropbtn"><Link to="#">CATEGORIES</Link> </li>
        <div class="dropdown-content">
@@ -25,7 +25,7 @@ export default function Topbar() {
          <a href="#">Travel</a>
          <a href="#">Music</a>
        </div>
-     </div>}
+     </div>
         {user   && <li><Link to="/write">WRITE</Link></li>}
         {user   && <li> <Link to="/">LOGOUT</Link></li>}
         {user   && <li><Link to="/settings"> PROFILE</Link></li>}
