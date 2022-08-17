@@ -26,7 +26,7 @@ export default function Topbar() {
          <a href="#">Music</a>
        </div>
      </div>
-        {user   && <li><Link to="/write">WRITE</Link></li>}
+        {user   && <li><Link to="/write">POST BLOG</Link></li>}
         {user   && <li> <Link to="/">LOGOUT</Link></li>}
         {user   && <li><Link to="/settings"> PROFILE</Link></li>}
         {user   || <li><Link className="link" to="/loginpage">LOGIN</Link></li>}

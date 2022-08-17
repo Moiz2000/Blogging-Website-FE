@@ -12,14 +12,14 @@ hr{
 }
 
 .singlePostImg {
-  width: 100%;
+  justify-content: center;
+  width: 70%;
   height: 500px;
   margin-top: 15px;
   margin-bottom: 15px;
   border-radius: 5px;
   object-fit: cover;
 }
-
 .singlePostTitle{
   color: rgb(43, 206, 206);
   text-align: center;
@@ -37,29 +37,28 @@ hr{
 }
 
 .singlePostInfo{
-  margin-top: 40px;
+  /* margin-top: 40px;
   margin-left: 30%;
-  margin-right: 30%;
-  float: left;
+  margin-right: 30%; */
+  /* text-align: center;
   font-weight: bold;
   color: rgb(43, 206, 206);
   font-size: 20px;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
- 
+  */
 }
 .singlePostInfo1{
-  margin-left: 30%;
-  margin-right: 30%;
-  float: right;
-  font-weight: bold;
-  color: rgb(43, 206, 206);
-  font-size: 20px;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
- 
+  /* float: right; */
+  /* float: right; */
+  display: inline-block;
+  font-size: 16px;
+  color: #000000;
+  font-family: "Varela Round", Arial, Helvetica, sans-serif;
+
 }
-.singlePostAuthor{
+/* .singlePostAuthor{
   color: rgb(11, 10, 10);
-}
+} */
 .singlePostEdit {
   float: right;
   font-size: 16px;
@@ -77,28 +76,27 @@ hr{
   color: tomato;
 }
 
-/* .singlePostInfo {
-  margin-bottom: 20px;
-  display: flex;
-  justify-content: space-between;
+.singlePostInfo {
+  /* margin-bottom: 20px; */
+  display: inline-block;
+  /* justify-content: space-between; */
   font-size: 16px;
-  color: #be9656;
+  color: #000000;
   font-family: "Varela Round", Arial, Helvetica, sans-serif;
 }
 
 .singlePostAuthor{
   margin-left: 5px;
-} */
+}
 
 .singlePostDesc {
-margin-left: 30%;
-margin-right: 30%;
-  color: rgb(0, 0, 0);
+
   text-align: center;
-  font-size: 20px;
-  padding-top: 90px;
   font-weight: 400;
-font-family: Arial, Helvetica, sans-serif;
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+ 
 }
 
 .singlePostDesc::first-letter {

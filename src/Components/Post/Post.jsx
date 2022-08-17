@@ -16,7 +16,7 @@ export default function Post({img}) {
           </Link>
         </span>
         <div className="postCats">
-          <span className="postCat">
+          <span className="postCatt">
             <Link className="link" to="/posts?cat=Music">
               Music
             </Link>
