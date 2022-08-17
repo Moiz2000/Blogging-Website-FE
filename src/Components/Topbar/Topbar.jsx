@@ -1,8 +1,19 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import "./topbar.css";
+import "./Topbar.css";
+import axios from 'axios';
 
 export default function Topbar() {
   const user = true;
+  const [tags, setTags] = useState([]);
+  useEffect(()=>{
+    const FetchTag=async ()=>{
+      const result= await axios.get("http://localhost:5000/tag")
+      //console.log(result.data);
+      setTags(result.data);
+    }
+    FetchTag();
+  },[])
   return (
     <div>
       <nav>
@@ -21,9 +32,12 @@ export default function Topbar() {
        <div class="dropdown">
       <li class="dropbtn"><Link to="#">CATEGORIES</Link> </li>
        <div class="dropdown-content">
-         <a href="#">Life</a>
-         <a href="#">Travel</a>
-         <a href="#">Music</a>
+       {
+        tags.map((c)=>(
+          <Link className="link" to={`/homepage?cat=${c.name}`}>
+            {c.name}
+          </Link>
+        ))}
        </div>
      </div>
         {user   && <li><Link to="/write">WRITE</Link></li>}

@@ -30,7 +30,7 @@ function App() {
         <Route path='/masterpage' exact element={<Masterpage/>} />
         <Route path='/homepage' exact element={<Homepage/>}/>
         <Route path='/write' exact element={<Write/>}/>
-        <Route path='/single' exact element={<Single/>}/>
+        <Route path='/single/:postId' exact element={<Single/>}/>
         <Route path='/settings' exact element={<Settings/>}/>
         <Route path='/comments' exact element={<Comments
         commentsUrl="http://localhost:3004/comments"
