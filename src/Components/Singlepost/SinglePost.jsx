@@ -19,19 +19,16 @@ export default function SinglePost() {
             </Link>
           </span>
           <br />
-          <div className="imageandtext">
-          <Stack className="avatar">
-      <Avatar alt="Tayyaba Tabassum" src="/static/images/avatar/2.jpg" />
-      </Stack>         
-    <ul  className="information">
-          <li className="singlePostInfo"> 
-        Tayyaba Tabassum</li>
-            <br />
-            
-          <li className="singlePostInfo1">12:30 pm</li>
-        </ul>
+          <div className="comment-image-contaierr">
+      <Avatar alt="Tayyaba Tabassum"  className="imgg" src="/static/images/avatar/2.jpg" />        
+      <div className="comment-right-partt">
+        <div className="comment-contentt">
+          <div className="comment-authorr">Tayyaba Tabassum</div>
+          <div>12:30 pm</div>
         </div>
-        </div> 
+        </div>
+        </div>  
+      </div> 
         <div className="singlePostEdit">
          {
           user &&

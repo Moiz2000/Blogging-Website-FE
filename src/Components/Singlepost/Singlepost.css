@@ -39,24 +39,29 @@ margin-left: 15%;
 .icons{
 margin-left: 30%;
 }
-.avatar{
-  display:inline;
-   white-space:nowrap;
-  margin-left: 40%;
-  margin-top: 40px;
+.imgg{
+  margin-left: 32%;
 }
-.imageandtext{
-        display: inline;
-        margin-left: 40%;
+.comment-image-containerr Stack {
+  margin-left: 30%;
 }
-.singlePostInfo{
-  display:inline;
-   white-space:nowrap;
+
+.comment-right-partt {
+  /* float: left; */
+}
+
+.comment-contentt {
+  display: flex;
+  
+}
+
+.comment-authorr { 
+  margin-left: 60px;
+  font-size: 20px;
   color: rgb(0, 0, 0);
-  font-size: 19px;
-  margin-left: 45%;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+
+
 .postCat{
   color: rgb(0, 0, 0);
   font-size: 19px;
@@ -66,14 +71,14 @@ margin-left: 30%;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-.singlePostInfo1{
+/* .singlePostInfo1{
   color: rgb(0, 0, 0);
   font-size: 19px;
   margin-left: 47%;
   font-style: italic;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 
-}
+} */
 /* .singlePostAuthor{
   color: rgb(11, 10, 10);
 } */
