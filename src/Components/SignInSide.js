@@ -43,10 +43,9 @@ export default function SignIn({setIsLoggedIn}) {
     try{
       axios.defaults.headers.post['Access-Control-Allow-Origion']='*';
       await axios.post("http://localhost:5000/user/signin", userData).then((response)=>{
-      console.log(response.data);
-      localStorage.setItem('token',response.data.token);
-      localStorage.setItem('IsLoggedIn',true);
-      // setIsLoggedIn(true);
+      console.log(response.data.token.token);
+      localStorage.setItem('token',response.data.token.token);
+      localStorage.setItem('user',JSON.stringify(response.data.userData));
       // window.alert("Successfully LoggedIn")
       navigate('/homepage');
       })
@@ -104,6 +103,7 @@ export default function SignIn({setIsLoggedIn}) {
             />
             <Button
              //onClick={() => navigate('/homepage')}
+              // disabled={isFetching}
               type="submit"
               fullWidth
               variant="contained"

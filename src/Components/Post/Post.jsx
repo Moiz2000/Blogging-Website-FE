@@ -29,12 +29,16 @@ export default function Post({post}) {
           </Link>
         </span>
         <div className="postCats">
-          <span className="postCat">
-            <Link className="link" to="/posts?cat=Music">
-              Music
-            </Link>
-          </span>
-          ))}
+          {
+            
+            cat.map((c)=>(
+              <span className="postCat">
+              <Link className="link" to={`/homepage?cat=${c.name}`}>
+                {'     '+c.name}
+              </Link>
+              </span>
+            ))}
+
         </div>
         <span className="postDate">{new Date(post.Create_Time).toDateString()}</span>
       </div>
