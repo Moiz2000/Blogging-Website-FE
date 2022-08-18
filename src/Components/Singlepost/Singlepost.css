@@ -1,34 +1,90 @@
 /* .singlePost {
   flex: 9;
 } */
-hr{
+hr {
   margin-left: 30%;
   margin-right: 30%;
   color: black;
   border: 1px solid black;
 }
+
 .singlePostWrapper {
   padding-right: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .singlePostImg {
+  margin-left: 15%;
+  color: rgb(0, 0, 0);
   justify-content: center;
   width: 70%;
   height: 500px;
-  margin-top: 15px;
-  margin-bottom: 15px;
+  margin-top: 30px;
+  /* margin-bottom: 15px; */
   border-radius: 5px;
-  object-fit: cover;
+  /* object-fit: cover; */
 }
-.singlePostTitle{
-  color: rgb(43, 206, 206);
+
+.grid {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  width: 100%;
+  height: 300px;
+  /* position: relative; */
+}
+
+.singlePostTitle {
+  color: rgb(0, 0, 0);
   text-align: center;
-  font-size: 40px;
-  padding-top: 90px;
+  font-size: 45px;
+  padding-top: 100px;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
-.postCat{
-  color: rgb(43, 206, 206);
+
+.singlePostTitleInput {
+  font-size: 45px;
+  padding-top: 100px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-align: center;
+  border: none;
+  color: gray;
+  border-bottom: 1px solid lightgray;
+}
+
+.singlePostTitleInput:focus {
+  outline: none;
+}
+
+.icons {
+  margin-left: 30%;
+}
+
+.imgg {
+  margin-left: 32%;
+}
+
+.comment-image-containerr Stack {
+  margin-left: 30%;
+}
+
+.comment-right-partt {
+  /* float: left; */
+}
+
+.comment-contentt {
+  display: flex;
+
+}
+
+.comment-authorr {
+  margin-left: 60px;
+  font-size: 20px;
+  color: rgb(0, 0, 0);
+}
+
+
+.postCat {
+  color: rgb(0, 0, 0);
   font-size: 19px;
   margin-left: 45%;
   padding-top: 40px;
@@ -36,30 +92,19 @@ hr{
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-.singlePostInfo{
-  /* margin-top: 40px;
-  margin-left: 30%;
-  margin-right: 30%; */
-  /* text-align: center;
-  font-weight: bold;
-  color: rgb(43, 206, 206);
-  font-size: 20px;
+/* .singlePostInfo1{
+  color: rgb(0, 0, 0);
+  font-size: 19px;
+  margin-left: 47%;
+  font-style: italic;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  */
-}
-.singlePostInfo1{
-  /* float: right; */
-  /* float: right; */
-  display: inline-block;
-  font-size: 16px;
-  color: #000000;
-  font-family: "Varela Round", Arial, Helvetica, sans-serif;
 
-}
+} */
 /* .singlePostAuthor{
   color: rgb(11, 10, 10);
 } */
 .singlePostEdit {
+  margin-right: 17%;
   float: right;
   font-size: 16px;
 }
@@ -72,31 +117,39 @@ hr{
 .singlePostIcon:first-child {
   color: teal;
 }
+
 .singlePostIcon:last-child {
   color: tomato;
 }
 
-.singlePostInfo {
-  /* margin-bottom: 20px; */
+/* .singlePostInfo {
   display: inline-block;
-  /* justify-content: space-between; */
   font-size: 16px;
   color: #000000;
   font-family: "Varela Round", Arial, Helvetica, sans-serif;
-}
+} */
 
-.singlePostAuthor{
+.singlePostAuthor {
   margin-left: 5px;
 }
 
 .singlePostDesc {
 
-  text-align: center;
-  font-weight: 400;
   color: rgb(0, 0, 0);
-  font-size: 20px;
+  margin-left: 10%;
+  margin-right: 10%;
+  text-align: center;
+  font-size: 16px;
+  padding-top: 20px;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
- 
+
+}
+
+.singlePostDescInput {
+  border: none;
+  color: #666;
+  font-size: 18px;
+  line-height: 25px;
 }
 
 .singlePostDesc::first-letter {
@@ -105,34 +158,34 @@ hr{
   font-weight: 600;
 }
 
-.colorchange:active{
-  color: rgb(255, 0, 34);
-}
-.grid{
-  width: 100%;
-  height: 300px;
-  background-image: linear-gradient(180deg, rgb(0, 0, 0), rgb(100, 100, 98));
-
-}.like{
-  margin-left: 30%;
-  margin-right: 30%;
-  color: rgb(43, 206, 206);
-  display: inline-block;
-    text-align: center;
-    font-size: 20px;
-
-    font-weight: 400;
-  font-family: Arial, Helvetica, sans-serif; 
+.singleClassButton {
+  width: 100px;
+  border: none;
+  background-color: teal;
+  padding: 5px;
+  color: white;
+  border-radius: 5px;
   cursor: pointer;
+  align-self: flex-end;
+  margin-top: 20px;
 }
-.comment{
-  margin-left: 30%;
-  margin-right: 30%;
-  color: rgb(43, 206, 206);
-  display: inline-block;
-  font-size: 20px;
-  font-weight: 400;
-  /* float : right; */
-  font-family: Arial, Helvetica, sans-serif; 
+
+#like {
   cursor: pointer;
+  margin-left: 33%;
+}
+
+.fa-heart:active {
+  color: red;
+}
+
+.fa-heart::after {
+  color: red;
+}
+
+#comm {
+  cursor: pointer;
+  margin-right: 40px;
+  float: right;
+  margin-right: 33%;
 }

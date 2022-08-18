@@ -1,10 +1,11 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'clamp';
-} 
-.logo-name{
+}
+
+.logo-name {
   color: rgb(255, 255, 255);
   text-decoration: none;
   font-size: 35px;
@@ -19,10 +20,12 @@
   cursor: pointer;
 
 }
-.logo-name:hover{
+
+.logo-name:hover {
   color: rgb(130, 232, 246);
- }
-nav{
+}
+
+nav {
   display: flex;
   height: 80px;
   width: 100%;
@@ -32,30 +35,34 @@ nav{
   padding: 0 50px 0 100px;
   flex-wrap: wrap;
 }
-nav .logo{
+
+nav .logo {
   width: 100px;
-  height: 100px;  
+  height: 100px;
 }
-nav ul{
+
+nav ul {
   margin-top: 15px;
   display: flex;
   flex-wrap: wrap;
   list-style: none;
 }
+
 /* nav ul li button{
   color: white;
   margin: 0 5px;
 } */
 
-nav ul li{
+nav ul li {
   /* font-size: 20px; */
   color: white;
   margin: 0 5px;
 }
-nav ul li a{ 
-  
-/* float: right;  */
- color: rgb(255, 255, 255);
+
+nav ul li a {
+
+  /* float: right;  */
+  color: rgb(255, 255, 255);
   text-decoration: none;
   font-size: 20px;
   padding: 8px 15px;
@@ -64,31 +71,37 @@ nav ul li a{
   transition: all 0.3s ease;
 }
 
-nav ul li a:hover{
-  color: rgb(130, 232, 246);
- }
-nav .menu-btn i{
+nav ul li a:hover {
+  color: rgb(255, 255, 255);
+}
+
+nav .menu-btn i {
   color: rgb(130, 232, 246);
   font-size: 22px;
   cursor: pointer;
   display: none;
 }
-input[type="checkbox"]{
+
+input[type="checkbox"] {
   display: none;
 }
-@media (max-width: 1000px){
-  nav{
+
+@media (max-width: 1000px) {
+  nav {
     padding: 0 40px 0 50px;
   }
 }
+
 @media (max-width: 920px) {
-  nav .menu-btn i{
+  nav .menu-btn i {
     display: block;
   }
-  #click:checked ~ .menu-btn i:before{
+
+  #click:checked~.menu-btn i:before {
     content: "\f00d";
   }
-  nav ul{
+
+  nav ul {
     position: fixed;
     top: 100px;
     right: -100%;
@@ -99,14 +112,17 @@ input[type="checkbox"]{
     display: block;
     transition: all 0.3s ease;
   }
-  #click:checked ~ ul{
+
+  #click:checked~ul {
     right: 0;
   }
-  nav ul li{
+
+  nav ul li {
     width: 100%;
     margin: 40px 0;
   }
-  nav ul li a{
+
+  nav ul li a {
     width: 100%;
     margin-left: -100%;
     display: block;
@@ -114,15 +130,18 @@ input[type="checkbox"]{
     transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
   }
-  #click:checked ~ ul li a{
+
+  #click:checked~ul li a {
     margin-left: 0px;
 
   }
+
   nav ul li a.active,
-  nav ul li a:hover{
+  nav ul li a:hover {
     color: cyan;
   }
 }
+
 .topImg {
   width: 40px;
   height: 40px;
@@ -152,7 +171,7 @@ input[type="checkbox"]{
   position: absolute;
   background-color: #f1f1f1;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
@@ -165,10 +184,14 @@ input[type="checkbox"]{
 }
 
 /* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #ddd;}
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
 
 /* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 /* .dropdown:hover .dropbtn {background-color: #3e8e41;} */

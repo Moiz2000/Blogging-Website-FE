@@ -1,8 +1,7 @@
-import { useEffect, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
-import "./Singlepost.css";
-import axios from 'axios';
-
+import { Link } from "react-router-dom";
+import "./singlePost.css";
+import Avatar from '@mui/material/Avatar';
+import Stack from '@mui/material/Stack';
 export default function SinglePost() {
 
   const user = true;

@@ -1,8 +1,5 @@
-import "./Write.css";
-import Topbar from '../../Components/Topbar/Topbar';
-import { useEffect, useState } from "react";
-import axios from 'axios';
-import { useNavigate } from "react-router-dom";
+import  './Write.css';
+import Topbar from '../../Components/topbar/Topbar';
 
 export default function Write() {
   const navigate = useNavigate()
