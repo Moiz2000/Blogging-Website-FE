@@ -29,11 +29,9 @@ export default function Post({post}) {
           </Link>
         </span>
         <div className="postCats">
-        {
-          cat.map((c)=>(
-            <span className="postCat">
-            <Link className="link" to={`/homepage?cat=${c.name}`}>
-              {c.name}
+          <span className="postCat">
+            <Link className="link" to="/posts?cat=Music">
+              Music
             </Link>
           </span>
           ))}

@@ -50,9 +50,11 @@
         padding: 2px 20px;
       }
     p{
-        font-weight:bold;
+        font-weight:500;
+        font-weight: bold;
         font-size: 20px ;
-        color: #244447;
+        /* font-style: italic; */
+        color: #000000;
 
 
     }

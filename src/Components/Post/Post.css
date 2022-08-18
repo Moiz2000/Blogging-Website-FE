@@ -1,6 +1,7 @@
 .post {
 width: 386px;
-margin-left: 130px ;
+margin-left: 50px ;
+margin-right: 30px;
 margin-top: 100px;
 flex-direction: column;
 border: 2px solid #ffffff;
@@ -8,8 +9,7 @@ box-shadow: 0 12px 16px 0 rgb(255, 255, 255), 0 17px 50px 0 rgba(0,0,0,0.19);
 border-radius: 10px;
 }
 .post:hover, .postImg:hover {
-  width: 500px;
-  opacity: 120%;
+  
   box-shadow: 0 12px 16px 0 rgba(14, 8, 8, 0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 .postImg {
@@ -25,14 +25,13 @@ border-radius: 10px;
   align-items:center;
 }
 
-.postCat {
-  font-family: "Varela Round", Arial, Helvetica, sans-serif;
-  font-weight: 400, bold;
-  font-size: 13px;
-  color: #000000;
+.postCatt{
+  font-weight: bold;
+  font-size: 16px;
   /* line-height: 19px; */
   margin-top: 15px;
   cursor: pointer;
+  text-align: center;
 }
 
 .postTitle {
@@ -52,11 +51,11 @@ border-radius: 10px;
   color: #000000;
 }
 
-.postDesc {
-  font-family: "Varela Round", Arial, Helvetica, sans-serif;
+.postDesc{
+  /* font-family: "Varela Round", Arial, Helvetica, sans-serif; */
   font-weight: 400;
-  font-size: 15px;
-  line-height: 24px;
+  font-size: 18px;
+  line-height: 25px;
   color: #000000;
   /* margin-top: 15px; */
   overflow: hidden;
