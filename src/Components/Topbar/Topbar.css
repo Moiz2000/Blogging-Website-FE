@@ -60,7 +60,7 @@ nav ul li a{
 }
 
 nav ul li a:hover{
-  color: rgb(130, 232, 246);
+  color: rgb(0, 0, 0);
  }
 nav .menu-btn i{
   color: rgb(130, 232, 246);
