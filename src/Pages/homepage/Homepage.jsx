@@ -10,26 +10,26 @@ import { Context } from "../../Components/context/Context";
 
 export default function Homepage() {
   // const {user}=useContext(Context)
-  const [posts,setPosts]=useState([]);
-  const {search}=useLocation()
+  const [posts, setPosts] = useState([]);
+  const { search } = useLocation()
   // const [open, setOpen] = React.useState(true);
   // let loginState=localStorage.getItem('IsLoggedIn');
   //console.log(location);
-  
-  useEffect(()=>{
-    const FetchPost = async()=>{
-      const res=await axios.get("http://localhost:5000/blog"+search)
+
+  useEffect(() => {
+    const FetchPost = async () => {
+      const res = await axios.get("http://https://blogbuzz-team4.herokuapp.com/blog" + search)
       //console.log(res)
       setPosts(res.data)
     }
     FetchPost()
-  },[search])
+  }, [search])
   return (
     <>
-    <Topbar/>
-    {/* <ImageSlider slides={SliderData} /> */}
+      <Topbar />
+      {/* <ImageSlider slides={SliderData} /> */}
       <div className="home">
-        <Posts posts={posts}/>
+        <Posts posts={posts} />
       </div>
     </>
   );

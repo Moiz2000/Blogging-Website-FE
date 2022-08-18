@@ -13,7 +13,7 @@ import axios from "axios";
 
 const Comments = ({ commentsUrl, currentUserId }) => {
   const location = useLocation();
-  const Id=location.pathname.split("/")[2];
+  const Id = location.pathname.split("/")[2];
   console.log(Id);
 
   const [backendComments, setBackendComments] = useState([]);
@@ -64,20 +64,20 @@ const Comments = ({ commentsUrl, currentUserId }) => {
     });
   }, []);
 
-  useEffect(()=>{
-    const Getcomment=async()=>{
-    try{
-      await axios.get("http://localhost:5000/blog/"+Id+"/comment").then((response)=>{
-        console.log(response.data)
-        setBackendComments(response.data);
-      });
-    }
-    catch(err){
-      window.alert("Something went wrong");
-    }
+  useEffect(() => {
+    const Getcomment = async () => {
+      try {
+        await axios.get("http://https://blogbuzz-team4.herokuapp.com/blog/" + Id + "/comment").then((response) => {
+          console.log(response.data)
+          setBackendComments(response.data);
+        });
+      }
+      catch (err) {
+        window.alert("Something went wrong");
+      }
     }
     Getcomment();
-  },[Id])
+  }, [Id])
   return (
     <div className="comments">
       <h3 className="comments-title">Comments</h3>
@@ -96,7 +96,7 @@ const Comments = ({ commentsUrl, currentUserId }) => {
             currentUserId={currentUserId}
           />
         ))}
-      <CommentForm submitLabel="Write" handleSubmit={addComment} />
+        <CommentForm submitLabel="Write" handleSubmit={addComment} />
       </div>
     </div>
   );

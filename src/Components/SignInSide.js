@@ -12,7 +12,7 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import {useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import axios from 'axios';
 
 // function Copyright(props) {
@@ -30,27 +30,27 @@ import axios from 'axios';
 
 const theme = createTheme();
 
-export default function SignIn({setIsLoggedIn}) {
+export default function SignIn({ setIsLoggedIn }) {
   const navigate = useNavigate()
   const [errorMessage, setErrorMessage] = React.useState('');
   const SubmitResponse = async (event) => {
     event.preventDefault();
-    const formData  = new FormData(event.currentTarget);
-    const userData={
-      email:formData.get('email'),
-      password:formData.get('password'),
+    const formData = new FormData(event.currentTarget);
+    const userData = {
+      email: formData.get('email'),
+      password: formData.get('password'),
     }
-    try{
-      axios.defaults.headers.post['Access-Control-Allow-Origion']='*';
-      await axios.post("http://localhost:5000/user/signin", userData).then((response)=>{
-      console.log(response.data.token.token);
-      localStorage.setItem('token',response.data.token.token);
-      localStorage.setItem('user',JSON.stringify(response.data.userData));
-      // window.alert("Successfully LoggedIn")
-      navigate('/homepage');
+    try {
+      axios.defaults.headers.post['Access-Control-Allow-Origion'] = '*';
+      await axios.post("http://https://blogbuzz-team4.herokuapp.com/user/signin", userData).then((response) => {
+        console.log(response.data.token.token);
+        localStorage.setItem('token', response.data.token.token);
+        localStorage.setItem('user', JSON.stringify(response.data.userData));
+        // window.alert("Successfully LoggedIn")
+        navigate('/homepage');
       })
     }
-    catch(err){
+    catch (err) {
       setErrorMessage("Incorrect Email or Password")
     }
   }
@@ -59,7 +59,7 @@ export default function SignIn({setIsLoggedIn}) {
     <ThemeProvider theme={theme}>
       <Container component="main" maxWidth="xs">
         <CssBaseline />
-        <Box            
+        <Box
           sx={{
             marginTop: 8,
             display: 'flex',
@@ -95,14 +95,14 @@ export default function SignIn({setIsLoggedIn}) {
               autoComplete="current-password"
             />
             <Typography component="p" variant="p" color="red">
-             {errorMessage}
+              {errorMessage}
             </Typography>
             <FormControlLabel
               control={<Checkbox value="remember" color="primary" />}
               label="Remember me"
             />
             <Button
-             //onClick={() => navigate('/homepage')}
+              //onClick={() => navigate('/homepage')}
               // disabled={isFetching}
               type="submit"
               fullWidth
@@ -118,7 +118,7 @@ export default function SignIn({setIsLoggedIn}) {
                 </Link>
               </Grid>
               <Grid item>
-                <Link href="#" variant="body2"      onClick={() => navigate('/signupage')}>
+                <Link href="#" variant="body2" onClick={() => navigate('/signupage')}>
                   {"Don't have an account? Sign Up"}
                 </Link>
               </Grid>
