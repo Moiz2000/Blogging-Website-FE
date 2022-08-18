@@ -1,13 +1,5 @@
-<<<<<<< HEAD
 import { Link } from "react-router-dom";
 import "./Topbar.css";
-=======
-import { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import "./Topbar.css";
-import axios from 'axios';
-import { Button } from "@mui/material";
->>>>>>> 1806083672d04c5459091a842a3c9d7ce904d4e7
 
 export default function Topbar() {
   const navigate=useNavigate();
@@ -55,10 +47,6 @@ export default function Topbar() {
        </div>
      </div>
         {user   && <li><Link to="/write">POST BLOG</Link></li>}
-<<<<<<< HEAD
-=======
-        {user   && <li> <Button onClick={handleLogout}>LOGOUT</Button></li>}
->>>>>>> 1806083672d04c5459091a842a3c9d7ce904d4e7
         {user   && <li><Link to="/settings"> PROFILE</Link></li>}
         {user   && <li> <Link to="/">LOGOUT</Link></li>}
 

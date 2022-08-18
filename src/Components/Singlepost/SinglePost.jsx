@@ -1,15 +1,7 @@
-<<<<<<< HEAD
 import { Link } from "react-router-dom";
 import "./singlePost.css";
 import Avatar from '@mui/material/Avatar';
 import Stack from '@mui/material/Stack';
-=======
-import { useEffect, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
-import "./Singlepost.css";
-import axios from 'axios';
-
->>>>>>> 1806083672d04c5459091a842a3c9d7ce904d4e7
 export default function SinglePost() {
 
   const user = true;
@@ -41,7 +33,6 @@ export default function SinglePost() {
       <div className="singlePostWrapper">
         <div className="grid">
        <h1 className="singlePostTitle">
-<<<<<<< HEAD
         Create Hands-Free on Instagram </h1>
         <span className="postCat">
             <Link className="link" to="/posts?cat=Music">
@@ -87,57 +78,15 @@ export default function SinglePost() {
         elit. Iste error quibusdam ipsa quis quidem doloribus eos, dolore ea
         iusto impedit! Voluptatum necessitatibus eum beatae, adipisci voluptas
         a odit
-=======
-        {blog.Title}</h1>
-        <span className="postCat">Category:
-        {
-          cat.map((c)=>(
-            <Link className="link" to={`/homepage?cat=${c.name}`}>
-              {'     '+c.name}
-            </Link>
-          ))}
-        
-        </span>
-        </div> 
-        <p className="singlePostDesc">
-          { blog.ImageName || <img className="singlePostImg"
-          src="https://images.pexels.com/photos/6685428/pexels-photo-6685428.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
-          alt=""
-        /> }
-         <div >
-          <span className="singlePostInfo">
-            Author:
-              <Link className="link" to={`/homepage?user=${blog.name}`}>
-                {blog.name}
-              </Link>
-            <br />
-          </span>
-          <span className="singlePostInfo1">{new Date(blog.Create_Time).toDateString()}</span>
-        </div> 
-        {blog.Text}
->>>>>>> 1806083672d04c5459091a842a3c9d7ce904d4e7
         </p>
         <hr />
         {
           user &&
         <ul>
-<<<<<<< HEAD
     <Link to="#"><i className="fa fa-heart fa-3x" aria-hidden="true" id="like"></i></Link> 
 <Link to="/comments"><i class="fa fa-comment fa-3x" aria-hidden="true" id="comm"></i></Link>
         </ul> }
         
-=======
-          <li className="like">
-              Like
-          </li>
-          <li className="comment">
-            <Link className="link" to={`/comments/${blog.id}`}>
-              Comment
-            </Link>
-          </li>
-        </ul>
-        }
->>>>>>> 1806083672d04c5459091a842a3c9d7ce904d4e7
       </div>
     </div>
   );
