@@ -13,7 +13,7 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import {useNavigate} from "react-router-dom";
-
+import axios from 'axios';
 
 // function Copyright(props) {
 //   return (
@@ -30,18 +30,30 @@ import {useNavigate} from "react-router-dom";
 
 const theme = createTheme();
 
-export default function SignIn() {
-
-
+export default function SignIn({setIsLoggedIn}) {
   const navigate = useNavigate()
-  const handleSubmit = (event) => {
+  const [errorMessage, setErrorMessage] = React.useState('');
+  const SubmitResponse = async (event) => {
     event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get('email'),
-      password: data.get('password'),
-    });
-  };
+    const formData  = new FormData(event.currentTarget);
+    const userData={
+      email:formData.get('email'),
+      password:formData.get('password'),
+    }
+    try{
+      axios.defaults.headers.post['Access-Control-Allow-Origion']='*';
+      await axios.post("http://localhost:5000/user/signin", userData).then((response)=>{
+      console.log(response.data.token.token);
+      localStorage.setItem('token',response.data.token.token);
+      localStorage.setItem('user',JSON.stringify(response.data.userData));
+      // window.alert("Successfully LoggedIn")
+      navigate('/homepage');
+      })
+    }
+    catch(err){
+      setErrorMessage("Incorrect Email or Password")
+    }
+  }
 
   return (
     <ThemeProvider theme={theme}>
@@ -61,7 +73,7 @@ export default function SignIn() {
           <Typography component="h1" variant="h5">
             Sign in
           </Typography>
-          <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
+          <Box component="form" onSubmit={SubmitResponse} noValidate sx={{ mt: 1 }}>
             <TextField
               margin="normal"
               required
@@ -82,12 +94,16 @@ export default function SignIn() {
               id="password"
               autoComplete="current-password"
             />
+            <Typography component="p" variant="p" color="red">
+             {errorMessage}
+            </Typography>
             <FormControlLabel
               control={<Checkbox value="remember" color="primary" />}
               label="Remember me"
             />
             <Button
-             onClick={() => navigate('/homepage')}
+             //onClick={() => navigate('/homepage')}
+              // disabled={isFetching}
               type="submit"
               fullWidth
               variant="contained"

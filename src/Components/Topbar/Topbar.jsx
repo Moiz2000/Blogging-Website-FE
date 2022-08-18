@@ -1,8 +1,28 @@
-import { Link } from "react-router-dom";
-import "./topbar.css";
+import { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import "./Topbar.css";
+import axios from 'axios';
+import { Button } from "@mui/material";
 
 export default function Topbar() {
-  const user = true;
+  const navigate=useNavigate();
+  //const user=true;
+  const user = localStorage.getItem('user');
+  const [tags, setTags] = useState([]);
+  const handleLogout = () => {
+    localStorage.removeItem('token');
+    localStorage.removeItem('user');
+    navigate('/')
+  };
+
+  useEffect(()=>{
+    const FetchTag=async ()=>{
+      const result= await axios.get("http://localhost:5000/tag")
+      //console.log(result.data);
+      setTags(result.data);
+    }
+    FetchTag();
+  },[])
   return (
     <div>
       <nav>
@@ -21,13 +41,16 @@ export default function Topbar() {
        <div class="dropdown">
       <li class="dropbtn"><Link to="#">CATEGORIES</Link> </li>
        <div class="dropdown-content">
-         <a href="#">Life</a>
-         <a href="#">Travel</a>
-         <a href="#">Music</a>
+       {
+        tags.map((c)=>(
+          <Link className="link" to={`/homepage?cat=${c.name}`}>
+            {c.name}
+          </Link>
+        ))}
        </div>
      </div>
         {user   && <li><Link to="/write">POST BLOG</Link></li>}
-        {user   && <li> <Link to="/">LOGOUT</Link></li>}
+        {user   && <li> <Button onClick={handleLogout}>LOGOUT</Button></li>}
         {user   && <li><Link to="/settings"> PROFILE</Link></li>}
         {user   || <li><Link className="link" to="/loginpage">LOGIN</Link></li>}
         {user || <li><Link className="link" to="/signupage">REGISTER</Link></li>}

@@ -8,8 +8,14 @@ import {
   updateComment as updateCommentApi,
   deleteComment as deleteCommentApi,
 } from "../../Components/comments/api";
+import { useLocation } from "react-router-dom";
+import axios from "axios";
 
 const Comments = ({ commentsUrl, currentUserId }) => {
+  const location = useLocation();
+  const Id=location.pathname.split("/")[2];
+  console.log(Id);
+
   const [backendComments, setBackendComments] = useState([]);
   const [activeComment, setActiveComment] = useState(null);
   const rootComments = backendComments.filter(
@@ -58,6 +64,20 @@ const Comments = ({ commentsUrl, currentUserId }) => {
     });
   }, []);
 
+  useEffect(()=>{
+    const Getcomment=async()=>{
+    try{
+      await axios.get("http://localhost:5000/blog/"+Id+"/comment").then((response)=>{
+        console.log(response.data)
+        setBackendComments(response.data);
+      });
+    }
+    catch(err){
+      window.alert("Something went wrong");
+    }
+    }
+    Getcomment();
+  },[Id])
   return (
     <div className="comments">
       <h3 className="comments-title">Comments</h3>
