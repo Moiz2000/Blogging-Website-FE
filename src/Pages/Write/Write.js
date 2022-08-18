@@ -1,4 +1,4 @@
-import "./Write.css";
+import  './Write.css';
 import Topbar from '../../Components/topbar/Topbar';
 
 export default function Write() {
