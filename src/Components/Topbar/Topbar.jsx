@@ -1,5 +1,7 @@
-import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import "./Topbar.css";
+import axios from 'axios';
 
 export default function Topbar() {
   const navigate = useNavigate();
@@ -14,8 +16,8 @@ export default function Topbar() {
 
   useEffect(() => {
     const FetchTag = async () => {
-      const result = await axios.get("http://https://blogbuzz-team4.herokuapp.com/tag")
-      //console.log(result.data);
+      const result = await axios.get("http://localhost:5000/tag")
+      console.log(result.data);
       setTags(result.data);
     }
     FetchTag();
@@ -47,8 +49,9 @@ export default function Topbar() {
             </div>
           </div>
           {user && <li><Link to="/write">POST BLOG</Link></li>}
-          {user && <li> <Button onClick={handleLogout}>LOGOUT</Button></li>}
           {user && <li><Link to="/settings"> PROFILE</Link></li>}
+          {user && <li> <Link onClick={handleLogout} to="#" >LOGOUT</Link></li>}
+
           {user || <li><Link className="link" to="/loginpage">LOGIN</Link></li>}
           {user || <li><Link className="link" to="/signupage">REGISTER</Link></li>}
         </ul>
