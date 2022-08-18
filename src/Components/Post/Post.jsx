@@ -1,34 +1,49 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import "./post.css";
+import "./Post.css";
+import axios from 'axios';
 
-export default function Post({img}) {
+export default function Post({post}) {
+  const [cat,setCat]=useState([]);
+  let Id=post.id;
+  useEffect(()=>{
+    const FetchPost = async()=>{
+      const response=await axios.get("http://localhost:5000/blog/blogtag/"+Id)
+      //console.log(response)
+      setCat(response.data)
+    }
+    FetchPost()
+  },[Id])
   return (
     <div className="post">
-      <img
-        className="postImg"
-        src={img}
-        alt=""
-      />
+    {post.ImageName || <img
+      className="postImg"
+      //src={img}
+      alt=""
+    />}
+  
       <div className="postInfo">
         <span className="postTitle">
-          <Link to="/single" className="link">
-            Lorem ipsum dolor sit amet
+          <Link to={`/single/${post.id}`} className="link">
+            {post.Title}
           </Link>
         </span>
         <div className="postCats">
-          <span className="postCatt">
-            <Link className="link" to="/posts?cat=Music">
-              Music
-            </Link>
-          </span>
+          {
+            
+            cat.map((c)=>(
+              <span className="postCat">
+              <Link className="link" to={`/homepage?cat=${c.name}`}>
+                {'     '+c.name}
+              </Link>
+              </span>
+            ))}
+
         </div>
-        <span className="postDate">1 hour ago</span>
+        <span className="postDate">{new Date(post.Create_Time).toDateString()}</span>
       </div>
       <p className="postDesc">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda
-        officia architecto deserunt deleniti? Labore ipsum aspernatur magnam
-        fugiat, reprehenderit praesentium blanditiis quos cupiditate ratione
-        atque, exercitationem quibusdam, reiciendis odio laboriosam?
+        {post.Text}
       </p>
     </div>
   );

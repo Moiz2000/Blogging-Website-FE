@@ -42,6 +42,11 @@ nav ul{
   flex-wrap: wrap;
   list-style: none;
 }
+/* nav ul li button{
+  color: white;
+  margin: 0 5px;
+} */
+
 nav ul li{
   /* font-size: 20px; */
   color: white;
@@ -60,7 +65,11 @@ nav ul li a{
 }
 
 nav ul li a:hover{
+<<<<<<< HEAD
   color: rgb(255, 255, 255);
+=======
+  color: rgb(0, 0, 0);
+>>>>>>> 1806083672d04c5459091a842a3c9d7ce904d4e7
  }
 nav .menu-btn i{
   color: rgb(130, 232, 246);

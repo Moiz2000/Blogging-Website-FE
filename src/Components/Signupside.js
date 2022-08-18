@@ -13,7 +13,7 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import {useNavigate} from "react-router-dom";
-
+import axios from 'axios';
 
 function Copyright(props) {
   return (
@@ -32,13 +32,28 @@ const theme = createTheme();
 
 export default function SignUp() {
     const navigate =useNavigate()
-    const handleSubmit = (event) => {
+    const [errorMessage, setErrorMessage] = React.useState('')
+    const handleSubmit = async (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
-    console.log({
+    const userData={
+      name : data.get('firstName')+' '+data.get('lastName'),
       email: data.get('email'),
       password: data.get('password'),
-    });
+    }
+    try{
+      await axios.post("http://localhost:5000/user/SignUp", userData);
+      //setSuccess("Successfully LoggedIn")
+      localStorage.setItem('IsRegistered',true);
+      //console.log(localStorage.getItem('IsRegistered'));
+      navigate('/loginpage'
+      // ,{state:{data:success}}
+      ) ;
+      
+    }
+    catch(err){
+      setErrorMessage("Email or Password is not correct. Please try again");
+    }
   };
 
   return (
@@ -58,6 +73,9 @@ export default function SignUp() {
           </Avatar>
           <Typography component="h1" variant="h5">
             Sign up
+          </Typography>
+          <Typography component="p" variant="p" color="red">
+             {errorMessage}
           </Typography>
           <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
             <Grid container spacing={2}>
@@ -111,7 +129,7 @@ export default function SignUp() {
               </Grid>
             </Grid>
             <Button
-            onClick={() => navigate('/loginpage')}
+            //onClick={() => navigate('/loginpage')}
               type="submit"
               fullWidth
               variant="contained"

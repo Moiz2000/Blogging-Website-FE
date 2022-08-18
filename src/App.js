@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, useContext } from 'react';
 import './App.css';
 // import Landingpage from './src/Pages/Homepage';
 
@@ -12,12 +12,19 @@ import  Masterpage from './Pages/Masterpage';
 import Loginpage from './Pages/Loginpage';
 import SignUp from './Pages/Signuppage';
 import Comments from './Components/comments/Comments';
+import { Context } from './Components/context/Context';
 
 
 
 function App() {
-
-  const currentUser = true;
+    let user=true;
+    // let data=localStorage.getItem('user')
+    // if(data){
+    //   user=data;
+    // }
+    // else{
+    //   user=null;
+    // }
     return (
       <div className="App">
       <BrowserRouter>
@@ -30,9 +37,9 @@ function App() {
         <Route path='/masterpage' exact element={<Masterpage/>} />
         <Route path='/homepage' exact element={<Homepage/>}/>
         <Route path='/write' exact element={<Write/>}/>
-        <Route path='/single' exact element={<Single/>}/>
+        <Route path='/single/:postId' exact element={<Single/>}/>
         <Route path='/settings' exact element={<Settings/>}/>
-        <Route path='/comments' exact element={<Comments
+        <Route path='/comments/:id' exact element={<Comments
         commentsUrl="http://localhost:3004/comments"
         currentUserId="1"
       />}/>
